@@ -21,7 +21,7 @@ async function updateTotalSupply(){
     var totalSupply = await mintInstance.methods.totalSupply().call()
     var totalRemaining = 1000 - totalSupply;
 
-    document.querySelector("#mint-count").textContent = `${totalRemaining}/10000`;//"Tokens Remaining: " + totalRemaining;
+    document.querySelector("#mint-count").textContent = `${totalRemaining}/10000`;
 }
 
 async function onConnect() {
@@ -43,7 +43,7 @@ async function onConnect() {
     } else {
         provider = new WalletConnectProvider({
             pollingInterval: "10000",
-            infuraId: "ee3a6513482447aeb7192140120519b3", // TODO: replace with PIXLE id
+            infuraId: "fb4374ee73e940acbec7a9ed2bca7dae",
         });
         provider.enable()
             .then(async (accepted) => {
@@ -84,7 +84,7 @@ async function mintToken() {
 
     // TODO: change method to contract function
 
-    mintInstance.methods.mintAstrada(Number(mint_amount))
+    mintInstance.methods.presaleMint(Number(mint_amount))
         .send({
             from: selectedAccount,
             value: Web3.utils.toWei(String(mint_price), "wei"),
