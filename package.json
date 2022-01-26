@@ -1,7 +1,7 @@
 {
-  "name": "astrada-site",
+  "name": "pixle-site",
   "version": "1.0.0",
-  "description": "Astrada NFT Node Server",
+  "description": "PIXLE NFT Node Server",
   "main": "server.js",
   "scripts": {
     "test": "test",
