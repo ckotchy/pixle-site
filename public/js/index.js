@@ -36,6 +36,7 @@ async function onConnect() {
                 document.querySelector("#mint_amount").style.display = "block";
                 document.querySelector("#btn-mint").style.display = "block";
                 document.querySelector("#mint-count").style.display = "block";
+                document.querySelector("#amt-remaining").style.display = "block";
             })
             .catch((err) => {
                 console.error(err);
